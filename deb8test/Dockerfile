@@ -3,7 +3,8 @@ FROM debian:8
 MAINTAINER nikitasius "https://github.com/nikitasius"
 
 RUN apt-get update
-RUN apt-get install -y openssh-server
+RUN apt-get -y upgrade
+RUN apt-get install -y openssh-server vim mc
 RUN mkdir /var/run/sshd
 RUN useradd evegate -d /home/evegate
 RUN mkdir -p /home/evegate/.ssh
@@ -15,6 +16,11 @@ RUN echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCxPlU791bokZmmtzXL3XV9Ux12KgCZVA
 RUN echo 'root:root' |chpasswd
 RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -ri 's/^PubkeyAuthentication\s+.*/PubkeyAuthentication yes/' /etc/ssh/sshd_config
+
+RUN echo 'Match User evegate' >> /etc/ssh/sshd_config
+RUN echo 'ChrootDirectory /home/evegate' >> /etc/ssh/sshd_config
+RUN echo 'AllowTCPForwarding no' >> /etc/ssh/sshd_config
+RUN echo 'X11Forwarding no' >> /etc/ssh/sshd_config
 
 EXPOSE 22
 CMD    ["/usr/sbin/sshd", "-D"]
