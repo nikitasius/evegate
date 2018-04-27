@@ -9,7 +9,7 @@ RUN mkdir /var/run/sshd
 
 RUN mkdir -p /home/evegate
 RUN fallocate -l 100M /home/evegate.img
-RUN mkfs evegate.img
+RUN mkfs /home/evegate.img
 RUN useradd evegate -d /home/evegate
 RUN mkdir -p /root/.ssh
 RUN touch /root/.ssh/authorized_keys
