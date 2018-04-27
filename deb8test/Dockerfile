@@ -8,14 +8,7 @@ RUN apt-get install -y openssh-server vim mc
 RUN mkdir /var/run/sshd
 
 RUN useradd evegate -d /home/evegate
-
-RUN mkdir -p /media/users/
-RUN dd if=/dev/zero of=/media/users/evegate.img bs=512K count=200
-RUN mkfs.ext4 /media/users/evegate.img
-RUN mkdir -p /home/evegate
-RUN mount -o loop /media/users/evegate.img /home/evegate
 RUN mkdir -p /home/evegate/.ssh
-
 RUN mkdir -p /root/.ssh
 RUN touch /home/evegate/.ssh/authorized_keys
 RUN touch /root/.ssh/authorized_keys
