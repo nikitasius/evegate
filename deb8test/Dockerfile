@@ -26,4 +26,4 @@ RUN sed -ri 's/^RSAAuthentication\s+.*/RSAAuthentication yes/' /etc/ssh/sshd_con
 
 EXPOSE 22
 CMD    ["/usr/sbin/sshd", "-D"]
-CMD    ["/bin/sh", "/home/runme.sh"]
+FUCK FUCK FUCK
