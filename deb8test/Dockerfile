@@ -24,11 +24,7 @@ RUN echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCxPlU791bokZmmtzXL3XV9Ux12KgCZVA
 
 RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -ri 's/^PubkeyAuthentication\s+.*/PubkeyAuthentication yes/' /etc/ssh/sshd_config
-
-RUN echo 'Match User evegate' >> /etc/ssh/sshd_config
-RUN echo 'ChrootDirectory /home/evegate' >> /etc/ssh/sshd_config
-RUN echo 'AllowTCPForwarding no' >> /etc/ssh/sshd_config
-RUN echo 'X11Forwarding no' >> /etc/ssh/sshd_config
+RUN sed -ri 's/^RSAAuthentication\s+.*/RSAAuthentication yes/' /etc/ssh/sshd_config
 
 EXPOSE 22
 CMD    ["/usr/sbin/sshd", "-D"]
