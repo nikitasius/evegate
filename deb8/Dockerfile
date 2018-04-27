@@ -26,6 +26,8 @@ RUN chown wwwdummy:wwwdummy -R /home/wwwdummy/.ssh
 RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -ri 's/^PubkeyAuthentication\s+.*/PubkeyAuthentication yes/' /etc/ssh/sshd_config
 RUN sed -ri 's/^RSAAuthentication\s+.*/RSAAuthentication yes/' /etc/ssh/sshd_config
+RUN echo 'ClientAliveInterval 120' >> /etc/ssh/sshd_config
+RUN echo 'ClientAliveCountMax 7200' >> /etc/ssh/sshd_config
 RUN echo 'nameserver 8.8.8.8' > /etc/resolv.conf
 
 EXPOSE 22
