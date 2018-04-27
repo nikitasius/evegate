@@ -8,9 +8,9 @@ RUN apt-get install -y openssh-server vim mc
 RUN mkdir /var/run/sshd
 
 RUN mkdir -p /home/evegate
-RUN fallocate -l 100M evegate.img
+RUN fallocate -l 100M /home/evegate.img
 RUN mkfs evegate.img
-RUN mount -o loop disk.img /home/evegate
+RUN mount -o loop /home/evegate.img /home/evegate
 
 RUN useradd evegate -d /home/evegate
 RUN mkdir -p /home/evegate/.ssh
