@@ -4,7 +4,7 @@ MAINTAINER nikitasius "https://github.com/nikitasius"
 
 RUN apt-get update
 RUN apt-get -y upgrade
-RUN apt-get install -y openssh-server vim mc iptables net-tools
+RUN apt-get install -y openssh-server vim mc net-tools
 RUN mkdir /var/run/sshd
 RUN mkdir -p /home/evegate
 RUN mkdir -p /home/wwwdummy/.ssh
