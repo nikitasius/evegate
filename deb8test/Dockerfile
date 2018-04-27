@@ -7,6 +7,11 @@ RUN apt-get -y upgrade
 RUN apt-get install -y openssh-server vim mc
 RUN mkdir /var/run/sshd
 
+RUN mkdir -p /home/evegate
+RUN fallocate -l 100M evegate.img
+RUN mkfs evegate.img
+RUN mount -o loop disk.img /home/evegate
+
 RUN useradd evegate -d /home/evegate
 RUN mkdir -p /home/evegate/.ssh
 RUN mkdir -p /root/.ssh
