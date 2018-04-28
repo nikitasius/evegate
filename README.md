@@ -21,6 +21,8 @@ evegate proxy
 * 64.71.168.251 www.discourse.org
 * 64.71.168.251 corp.discourse.org
 * 104.27.47.35 discourse.org
+* 23.52.49.180 cdn.optimizely.com
+* 52.218.16.164 s3-eu-west-1.amazonaws.com
 
 ### Cloudfront ([json](https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips)):
 * 13.32.0.0/15
