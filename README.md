@@ -20,7 +20,7 @@ evegate proxy
 * 185.172.149.128 discourse-cdn-sjc1.com
 * 64.71.168.251 www.discourse.org
 * 64.71.168.251 corp.discourse.org
-* 104.27.47.35 iscourse.org
+* 104.27.47.35 discourse.org
 
 ### Cloudfront ([json](https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips)):
 * 13.32.0.0/15
