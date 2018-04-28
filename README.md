@@ -12,6 +12,16 @@ evegate proxy
 ### Google DNS
 * 8.8.8.8
 
+### Misc
+* 104.19.192.102 cdnjs.cloudflare.com
+* 205.185.208.52 code.jquery.com
+* 216.58.215.35 fonts.gstatic.com
+* 216.58.213.132 www.google.com
+* 185.172.149.128 discourse-cdn-sjc1.com
+* 64.71.168.251 www.discourse.org
+* 64.71.168.251 corp.discourse.org
+* 104.27.47.35 iscourse.org
+
 ### Cloudfront ([json](https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips)):
 * 13.32.0.0/15
 * 13.35.0.0/16
