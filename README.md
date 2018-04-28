@@ -22,6 +22,10 @@ evegate proxy
 * 64.71.168.251 corp.discourse.org
 * 104.27.47.35 discourse.org
 * 23.52.49.180 cdn.optimizely.com
+* 209.197.3.15 maxcdn.bootstrapcdn.com
+* 92.122.122.161 ocsp.int-x3.letsencrypt.org
+* 23.43.24.236 ocsp.entrust.net
+* 216.58.215.35 www.gstatic.com
 * 52.218.16.164 s3-eu-west-1.amazonaws.com
 
 ### Cloudfront ([json](https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips)):
@@ -31,7 +35,7 @@ evegate proxy
 * 52.84.0.0/15
 * 52.222.128.0/17
 * 54.182.0.0/16
-* 54.192.0.0/16
+* 54.192.0.0/16maxcdn.bootstrapcdn.com
 * 54.230.0.0/16
 * 54.239.128.0/18
 * 54.239.192.0/19
